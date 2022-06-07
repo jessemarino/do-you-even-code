@@ -1,54 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Do you even code?</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="timer">
-          <div class="timebox"></div>
-            <p>Seconds remaining</p>
-      </div>
-      </div class="start-button">
-        <button class="startbutt">Start</button>
-      </div>
-      <div class ="highscore">View HighScores</div>
-    </header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Do you think you can code?</title>
 
-    <main>
-        <section id = "intro" class="intro">
-            <div class="inst">
-                <h1>So you think you can code?</h1>
-                <div class="">
-                    <div class="">
-                        <p> Take this quiz to test your coding knowledge! At the end of this quiz put in your initials to keep track of your high score!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--pops in after other section-->
-        <section>
-            <figure class="qnabox">
-                <div class="question">
-                    <h2 id="quest">Heres the question</h2>
-                </div>
-                <div class="answerbox">
-                    <ul class="answer">
-                        <li class="answer1"><button class="ansbutton"><h4>anwser</h4></button></li>
-                        <li class="answer2"><button class="ansbutton"><h4>anwser</h4></button></li>
-                        <li class="answer3"><button class="ansbutton"><h4>anwser</h4></button></li>
-                        <li class="answer4"><button class="ansbutton"><h4>anwser</h4></button></li>
-                    </ul>
-                </div>
-            </figure>
-        </section>
-        <section>
-          
-        </section>
-    </main>
-    <script src="./assets/javascript/script.js"></script>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="scores"><a href="highscores.html">View Highscores</a></div>
+
+    <div class="timer">Time: <span id="time">0</span></div>
+
+    <div class="wrapper">
+      <div id="start-screen" class="start">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+          Click the start quiz button to test your coding knowledge! Be sure to
+          check out the high scores to see where you stand when you're finished.
+        </p>
+        <button id="start">Start Quiz</button>
+      </div>
+
+      <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="choices" class="choices"></div>
+      </div>
+
+      <div id="end-screen" class="hide">
+        <h2>Done!</h2>
+        <p>Your score is <span id="final-score"></span>.</p>
+        <p>
+          Enter your name: <input type="text" id="initials" />
+          <button id="submit">Submit</button>
+        </p>
+      </div>
+    </div>
+
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/logic.js"></script>
   </body>
 </html>
